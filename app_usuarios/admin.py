@@ -1,49 +1,25 @@
 from django.contrib import admin
-from django.contrib.auth.admin import UserAdmin
 from .models import Usuario
+from app_cliente_candidato.models import ClienteCandidato
+from app_cliente_empresa.models import ClienteEmpresa
+from app_administrador.models import Administrador  # Asegúrate de importar bien
 
-class UsuarioAdmin(UserAdmin):
-    model = Usuario
-    list_display = ('email', 'telefono', 'imagen', 'ubicacion')  # Opcional, puedes ajustar la lista que ves en la tabla
-    list_filter = ()  # Si no quieres filtros, déjalo vacío o ajusta según convenga
-    
-    fieldsets = (
-        (None, {'fields': (
-            'email',
-            'telefono',
-            'imagen',
-            'ubicacion',
-            'certificados_legales',
-            'certificados_discapacidad',
-            'hoja_vida',
-            'certificados_estudio',
-            'identificacion',
-            'datos_extra',
-            'fecha_nacimiento',
-        )}),
-    )
-    
-    add_fieldsets = (
-        (None, {
-            'classes': ('wide',),
-            'fields': (
-                'email',
-                'telefono',
-                'imagen',
-                'ubicacion',
-                'certificados_legales',
-                'certificados_discapacidad',
-                'hoja_vida',
-                'certificados_estudio',
-                'identificacion',
-                'datos_extra',
-                'fecha_nacimiento',
-                'password1',
-                'password2',
-            )
-        }),
-    )
-    
-    search_fields = ('email',)
-    ordering = ('email',)
+@admin.register(Usuario)
+class UsuarioAdmin(admin.ModelAdmin):
+    list_display = ('username', 'email', 'telefono', 'rol')
+    search_fields = ('username', 'email')
 
+@admin.register(ClienteCandidato)
+class ClienteCandidatoAdmin(admin.ModelAdmin):
+    list_display = ('usuario', 'profesion', 'fecha_nacimiento')
+    search_fields = ('usuario__email', 'profesion')
+
+@admin.register(ClienteEmpresa)
+class ClienteEmpresaAdmin(admin.ModelAdmin):
+    list_display = ('usuario', 'nit', 'ubicaciones')
+    search_fields = ('usuario__email', 'nit')
+
+@admin.register(Administrador)
+class AdministradorAdmin(admin.ModelAdmin):
+    list_display = ('usuario',)
+    search_fields = ('usuario__email',)

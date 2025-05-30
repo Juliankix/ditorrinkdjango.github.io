@@ -1,31 +1,23 @@
 from rest_framework import serializers
-from app_usuarios.models import Usuario  # usa tu modelo personalizado
+from app_usuarios.models import Usuario
+from django.contrib.auth.hashers import make_password
 
 class UsuarioSerializer(serializers.ModelSerializer):
+    password = serializers.CharField(write_only=True)
+
     class Meta:
         model = Usuario
-        fields = '__all__'
-        extra_kwargs = {
-            'password': {'write_only': True},
-        }
-
-    def validate(self, data):
-        return data
+        fields = ['username', 'email', 'telefono', 'ubicacion', 'rol', 'password']
 
     def create(self, validated_data):
-        password = validated_data.pop('password', None)
-        usuario = Usuario(**validated_data)
-        if password:
-            usuario.set_password(password)
-        usuario.save()
-        return usuario
+        password = validated_data.pop('password')
+        user = Usuario(**validated_data)
+        user.set_password(password)
+        user.save()
+        return user
 
     def update(self, instance, validated_data):
         password = validated_data.pop('password', None)
-        for attr, value in validated_data.items():
-            setattr(instance, attr, value)
         if password:
-            instance.set_password(password)
-        instance.save()
-        return instance
-
+            instance.password = make_password(password)
+        return super().update(instance, validated_data)

@@ -4,9 +4,11 @@ from app_usuarios.models import Usuario
 class ClienteEmpresa(models.Model):
     usuario = models.OneToOneField(Usuario, on_delete=models.CASCADE)
 
-    # Campos específicos de la empresa (si alguno no está ya en Usuario)
-    datos_extra = models.JSONField(blank=True, null=True)  # si aplica
-    # Puedes agregar más campos propios de la empresa aquí si los necesitas
+    certificado_existencia = models.FileField(upload_to='certificados_empresa/', null=True, blank=True)
+    rut = models.FileField(upload_to='certificados_empresa/', null=True, blank=True)
+    nit = models.CharField(max_length=30)
+    acta_constitucion = models.FileField(upload_to='certificados_empresa/', null=True, blank=True)
+    ubicaciones = models.TextField(blank=True, help_text="Direcciones de los locales, separadas por comas o en lista.")
 
     def __str__(self):
         return self.usuario.email

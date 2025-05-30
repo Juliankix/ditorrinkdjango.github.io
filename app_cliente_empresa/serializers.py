@@ -1,25 +1,19 @@
 from rest_framework import serializers
-from .models import ClienteEmpresa
+from app_cliente_empresa.models import ClienteEmpresa
 from app_usuarios.serializers import UsuarioSerializer
 
 class ClienteEmpresaSerializer(serializers.ModelSerializer):
-    usuario = UsuarioSerializer()  # Mostrar datos del usuario anidados
+    usuario = UsuarioSerializer()
 
     class Meta:
         model = ClienteEmpresa
-        fields = ['id', 'usuario', 'datos_extra']
-
-class ClienteEmpresaRegistroSerializer(serializers.ModelSerializer):
-    usuario = UsuarioSerializer()  # Para crear usuario anidado
-
-    class Meta:
-        model = ClienteEmpresa
-        fields = ['usuario', 'datos_extra']
+        fields = ['id', 'usuario', 'certificado_existencia', 'rut', 'nit', 'acta_constitucion', 'ubicaciones']
 
     def create(self, validated_data):
         usuario_data = validated_data.pop('usuario')
-        usuario_data['rol'] = 'empresa'  # Forzar rol empresa
-        usuario = UsuarioSerializer().create(validated_data=usuario_data)
+        usuario_serializer = UsuarioSerializer(data=usuario_data)
+        usuario_serializer.is_valid(raise_exception=True)
+        usuario = usuario_serializer.save()
         cliente_empresa = ClienteEmpresa.objects.create(usuario=usuario, **validated_data)
         return cliente_empresa
 
@@ -29,8 +23,5 @@ class ClienteEmpresaRegistroSerializer(serializers.ModelSerializer):
             usuario_serializer = UsuarioSerializer(instance.usuario, data=usuario_data, partial=True)
             usuario_serializer.is_valid(raise_exception=True)
             usuario_serializer.save()
-        for attr, value in validated_data.items():
-            setattr(instance, attr, value)
-        instance.save()
-        return instance
+        return super().update(instance, validated_data)
 
