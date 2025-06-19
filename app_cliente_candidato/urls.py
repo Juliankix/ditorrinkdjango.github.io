@@ -5,6 +5,7 @@ from .views import (
     ClienteCandidatoDetailView,
     ClienteCandidatoUpdateView,
     ClienteCandidatoDeleteView,
+    ExportarCandidatosExcel
 )
 
 urlpatterns = [
@@ -13,4 +14,5 @@ urlpatterns = [
     path('detalle/<int:pk>/', ClienteCandidatoDetailView.as_view(), name='cliente-candidato-detalle'),  # GET
     path('actualizar/<int:pk>/', ClienteCandidatoUpdateView.as_view(), name='cliente-candidato-actualizar'),  # PUT/PATCH
     path('eliminar/<int:pk>/', ClienteCandidatoDeleteView.as_view(), name='cliente-candidato-eliminar'),  # DELETE
+    path('candidatos/exportar/', ExportarCandidatosExcel.as_view()),
 ]

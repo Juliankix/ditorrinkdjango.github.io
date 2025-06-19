@@ -24,3 +24,19 @@ class ClienteCandidatoSerializer(serializers.ModelSerializer):
         usuario = UsuarioSerializer.create(UsuarioSerializer(), validated_data=usuario_data)
         candidato = ClienteCandidato.objects.create(usuario=usuario, **validated_data)
         return candidato
+
+    def update(self, instance, validated_data):
+        usuario_data = validated_data.pop('usuario', None)
+
+        if usuario_data:
+            usuario_instance = instance.usuario
+            for attr, value in usuario_data.items():
+                setattr(usuario_instance, attr, value)
+            usuario_instance.save()
+
+        for attr, value in validated_data.items():
+            setattr(instance, attr, value)
+        instance.save()
+
+        return instance
+
