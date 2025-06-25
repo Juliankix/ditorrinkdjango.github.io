@@ -1,6 +1,10 @@
 from rest_framework import generics
+from rest_framework.views import APIView
+from django.http import HttpResponse
 from .models import ClienteCandidato
 from .serializers import ClienteCandidatoSerializer
+import pandas as pd
+import io
 
 # Tus vistas generics
 class ClienteCandidatoCreateView(generics.CreateAPIView):
@@ -22,15 +26,6 @@ class ClienteCandidatoUpdateView(generics.UpdateAPIView):
 class ClienteCandidatoDeleteView(generics.DestroyAPIView):
     queryset = ClienteCandidato.objects.all()
     serializer_class = ClienteCandidatoSerializer
-
-# -----------------------
-# 👇 Aquí agregas la vista con pandas
-# -----------------------
-from rest_framework.views import APIView
-from rest_framework.permissions import IsAdminUser
-from django.http import HttpResponse
-import pandas as pd
-import io
 
 class ExportarCandidatosExcel(APIView):
     #permission_classes = [IsAdminUser]  # opcional

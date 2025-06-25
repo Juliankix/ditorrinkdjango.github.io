@@ -5,14 +5,14 @@ from .views import (
     ClienteCandidatoDetailView,
     ClienteCandidatoUpdateView,
     ClienteCandidatoDeleteView,
-    ExportarCandidatosExcel
+    ExportarCandidatosExcel,
 )
 
 urlpatterns = [
-    path('crear/', ClienteCandidatoCreateView.as_view(), name='cliente-candidato-crear'),  # POST
-    path('listar/', ClienteCandidatoListView.as_view(), name='cliente-candidato-listar'),  # GET
-    path('detalle/<int:pk>/', ClienteCandidatoDetailView.as_view(), name='cliente-candidato-detalle'),  # GET
-    path('actualizar/<int:pk>/', ClienteCandidatoUpdateView.as_view(), name='cliente-candidato-actualizar'),  # PUT/PATCH
-    path('eliminar/<int:pk>/', ClienteCandidatoDeleteView.as_view(), name='cliente-candidato-eliminar'),  # DELETE
-    path('candidatos/exportar/', ExportarCandidatosExcel.as_view()),
+    path('candidatos/crear/', ClienteCandidatoCreateView.as_view(), name='crear'),
+    path('candidatos/listar/', ClienteCandidatoListView.as_view(), name='listar'),
+    path('candidatos/detalle/<int:pk>/', ClienteCandidatoDetailView.as_view(), name='detalle'),
+    path('candidatos/actualizar/<int:pk>/', ClienteCandidatoUpdateView.as_view(), name='actualizar'),
+    path('candidatos/eliminar/<int:pk>/', ClienteCandidatoDeleteView.as_view(), name='eliminar'),
+    path('candidatos/exportar/', ExportarCandidatosExcel.as_view(), name='exportar_excel'),
 ]

@@ -1,348 +1,51 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Distorrink</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="/styles/styles.css">
-    <link rel="icon" href="/assets/index/Logomanoamarilla.png" type="image/x-icon">
-    <link rel="stylesheet" href="/styles/index.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Acceso</title>
+    <link rel="stylesheet" href="/styles/index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="navbar" role="navigation" aria-label="main navigation">
-        <div class="navbar-container">
-            <div class="logo">
-                <img src="/Assets/index/logoazul.png" alt="Logo de Distorrink" />
-                <span>Distorrink</span>
-            </div>
-            <nav class="nav-links" id="navLinks">
-                <a href="#inicio" class="active">Inicio</a>
-                <a href="#nosotros">Sobre nosotros</a>
-                <a href="#servicios">Servicios</a>
-                <a href="#porque">¿Porque confiar?</a>
-                <a href="#proceso">Proceso</a>
-                <a href="/Views/prestart/empress/empress.html">Empresas</a>
-            </nav>
-            <a href="/views/prestart/loginyregister_disc/login_register.html" class="quote-btn">Inicia sesion o registrate</a>
-            <div class="menu-icon" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </header>
-    
-    <section class="hero" id="inicio">
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <p class="hero-subtitle">Tu Oportunidad Laboral Sin Barreras</p>
-            <h1 class="hero-title">
-                <span>Conectamos Talento</span>
-                <span>Con Oportunidades</span>
-                <span>Sin Barreras</span>
-            </h1>
-            <p class="hero-description">
-                Distorrink es una bolsa de empleo inclusiva para personas con discapacidad.<br>
-                Fomentamos el desarrollo profesional de personas con discapacidad, conectándolas con empresas que valoran la diversidad.
-            </p>
-            <div class="hero-buttons">
-                <a href="/Views/prestart/loginyregister_disc/login_register.html" class="btn primary">Registrate con nosotros</a>
-                <a href="#" class="btn secondary">Para Empresas</a>
-            </div>
-        </div>
-        <div class="hero-image">
-            <img src="/Assets/index/hero.jpg" alt="Equipo diverso trabajando juntos" />
-        </div>
-    </section>
-
-    <section class="about-section" id="nosotros">
-        <div class="about-content">
-            <h2 class="about-title">Sobre Nosotros</h2>
-            <p class="about-subtitle">Transformando oportunidades en realidades laborales</p>
-            <p class="about-description">
-                Conoce más sobre nosotros y nuestro compromiso con la inclusión,<br>
-                y el desarrollo de nuevas oportunidades en el ámbito laboral.
-            </p>
-        </div>
-        <div class="stats-container">
-            <div class="stat-item">
-                <h3 class="stat-number">150+</h3>
-                <p class="stat-label">Empresas asociadas</p>
-            </div>
-            <div class="stat-item">
-                <h3 class="stat-number">2000+</h3>
-                <p class="stat-label">Candidatos registrados</p>
-            </div>
-            <div class="stat-item">
-                <h3 class="stat-number">99%</h3>
-                <p class="stat-label">Satisfacción</p>
-            </div>
-            <div class="stat-item">
-                <h3 class="stat-number">Premios</h3>
-                <p class="stat-label">Reconocimientos</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="services-section" id="servicios">
-        <div class="services-header">
-            <h2 class="services-title">Servicios que Ofrecemos para Impulsar tu Carrera</h2>
-            <div class="divider"></div>
-        </div>
+    <div class="container">
+        <h1>Panel de Gestión</h1>
         
-        <div class="services-container">
-            <div class="service-card">
-                <div class="service-icon">
-                    <i class="fas fa-handshake"></i>
-                </div>
-                <h3 class="service-name">Bolsa de Empleo Inclusiva</h3>
-                <p class="service-description">
-                    Conectamos a personas con discapacidad con empresas comprometidas con la diversidad.
-                    Accede a oportunidades laborales adaptadas a tus capacidades y potencial.
-                </p>
-                <a href="#" class="service-link">Saber más →</a>
-            </div>
-            
-            <div class="service-card">
-                <div class="service-icon">
-                    <i class="fas fa-user-tie"></i>
-                </div>
-                <h3 class="service-name">Asesoramiento Laboral</h3>
-                <p class="service-description">
-                    Ofrecemos orientación profesional personalizada para ayudarte a destacar en el mercado laboral.
-                    Preparamos tu CV y te entrenamos para entrevistas.
-                </p>
-                <a href="#" class="service-link">Saber más →</a>
-            </div>
-            
-            <div class="service-card">
-                <div class="service-icon">
-                    <i class="fas fa-graduation-cap"></i>
-                </div>
-                <h3 class="service-name">Capacitación Inclusiva</h3>
-                <p class="service-description">
-                    Cursos y talleres diseñados para desarrollar habilidades profesionales en entornos accesibles.
-                    Formación adaptada a diferentes tipos de discapacidad.
-                </p>
-                <a href="#" class="service-link">Saber más →</a>
-            </div>
-        </div>
-    </section>
-
-    <section class="trust-section" id="porque">
-        <div class="trust-container">
-            <div class="trust-content">
-                <h2 class="trust-title">¿Por qué confiar en <span>Distorrink</span> para tus necesidades de empleo inclusivo?</h2>
-                
-                <div class="trust-item">
-                    <div class="trust-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <div class="trust-text">
-                        <h3>Experiencia Comprobada</h3>
-                        <p>Llevamos años conectando talento con oportunidades, con un historial de éxito en inclusión laboral.</p>
-                    </div>
-                </div>
-                
-                <div class="trust-item">
-                    <div class="trust-icon">
-                        <i class="fas fa-handshake-angle"></i>
-                    </div>
-                    <div class="trust-text">
-                        <h3>Compromiso Real</h3>
-                        <p>Nuestra dedicación a la inclusión va más allá de las palabras, con programas concretos y resultados medibles.</p>
-                    </div>
-                </div>
-                
-                <div class="trust-item">
-                    <div class="trust-icon">
-                        <i class="fas fa-users-gear"></i>
-                    </div>
-                    <div class="trust-text">
-                        <h3>Red de Aliados</h3>
-                        <p>Colaboramos con empresas líderes comprometidas con la diversidad y la accesibilidad.</p>
-                    </div>
+        <div class="cards-container">
+            <!-- Card Administradores -->
+            <div class="card admin-card">
+                <h2>Administradores</h2>
+                <div class="options">
+                    <a href="/template/administrador/crear.html" class="btn">Crear</a>
+                    <a href="/template/administrador/detalle.html" class="btn">Detalle</a>
+                    <a href="/template/administrador/actualizar.html" class="btn">Actualizar</a>
+                    <a href="/template/administrador/eliminar.html" class="btn">Eliminar</a>
                 </div>
             </div>
             
-            <div class="trust-image">
-                <img src="/Assets/index/idea.jpg" alt="Equipo de Distorrink trabajando" />
+            <!-- Card Empresas -->
+            <div class="card company-card">
+                <h2>Empresas</h2>
+                <div class="options">
+                    <a href="/template/empresa/crear.html" class="btn">Crear</a>
+                    <a href="/template/empresa/detalle.html" class="btn">Detalle</a>
+                    <a href="/template/empresa/actualizar.html" class="btn">Actualizar</a>
+                    <a href="/template/empresa/eliminar.html" class="btn">Eliminar</a>
+                </div>
             </div>
-        </div>
-    </section>
-
-    <section class="process-section" id="proceso">
-        <div class="container">
-            <div class="section-header">
-                <p class="section-subtitle">Nuestro Proceso</p>
-                <h2 class="section-title">Nuestro Proceso de Trabajo Comprobado</h2>
-            </div>
-    
-            <div class="process-steps">
-                <div class="process-step">
-                    <div class="step-icon">
-                        <i class="fas fa-comments"></i>
-                        <div class="step-number">1</div>
-                    </div>
-                    <h3 class="step-title">Consulta Inicial</h3>
-                    <p class="step-description">Evaluamos tus necesidades y objetivos laborales para crear un plan personalizado.</p>
-                </div>
-    
-                <div class="process-step">
-                    <div class="step-icon">
-                        <i class="fas fa-chess"></i>
-                        <div class="step-number">2</div>
-                    </div>
-                    <h3 class="step-title">Estrategia</h3>
-                    <p class="step-description">Desarrollamos una estrategia de inclusión laboral adaptada a tu perfil profesional.</p>
-                </div>
-    
-                <div class="process-step">
-                    <div class="step-icon">
-                        <i class="fas fa-rocket"></i>
-                        <div class="step-number">3</div>
-                    </div>
-                    <h3 class="step-title">Implementación</h3>
-                    <p class="step-description">Conectamos tu talento con empresas comprometidas con la diversidad.</p>
-                </div>
-    
-                <div class="process-step">
-                    <div class="step-icon">
-                        <i class="fas fa-trophy"></i>
-                        <div class="step-number">4</div>
-                    </div>
-                    <h3 class="step-title">Resultado Final</h3>
-                    <p class="step-description">Logramos la inserción laboral efectiva con seguimiento y apoyo continuo.</p>
+            
+            <!-- Card Candidatos -->
+            <div class="card candidate-card">
+                <h2>Candidatos</h2>
+                <div class="options">
+                    <a href="/template/candidatos/crear.html" class="btn">Crear</a>
+                    <a href="/template/candidatos/detalle.html" class="btn">Detalle</a>
+                    <a href="/template/candidatos/actualizar.html" class="btn">Actualizar</a>
+                    <a href="/template/candidatos/eliminiar.html" class="btn">Eliminar</a>
+                    <a href="/app_cliente_candidato/candidatos/exportar/" class="btn">Exportar Excel</a>
                 </div>
             </div>
         </div>
-    </section>
-
-    <section class="team-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Conoce al equipo detrás de <span>Distorrink</span></h2>
-                <p class="section-subtitle">Profesionales comprometidos con la inclusión laboral</p>
-            </div>
-    
-            <div class="team-members">
-                <div class="team-card">
-                    <div class="member-photo">
-                        <img src="/Assets/index/Angel Moreno.avif" alt="Ángel Moreno">
-                        <div class="social-links">
-                            <a href="#"><i class="fab fa-linkedin"></i></a>
-                            <a href="#"><i class="fab fa-github"></i></a>
-                            <a href="#"><i class="fas fa-envelope"></i></a>
-                        </div>
-                    </div>
-                    <div class="member-info">
-                        <h3>Ángel Moreno</h3>
-                        <p class="position">Desarrollador y Programador Web</p>
-                        <p class="bio">Especialista en desarrollo de plataformas accesibles con más de 5 años de experiencia en tecnologías inclusivas.</p>
-                    </div>
-                </div>
-    
-
-                <div class="team-card">
-                    <div class="member-photo">
-                        <img src="/Assets/index/sergio pardo.jpg" alt="Sergio Pardo">
-                        <div class="social-links">
-                            <a href="#"><i class="fab fa-linkedin"></i></a>
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                            <a href="#"><i class="fas fa-envelope"></i></a>
-                        </div>
-                    </div>
-                    <div class="member-info">
-                        <h3>Sergio Pardo</h3>
-                        <p class="position">Experto en Accesibilidad Digital</p>
-                        <p class="bio">Apasionado por crear soluciones tecnológicas que eliminen barreras para personas con discapacidad.</p>
-                    </div>
-                </div>
-    
-                <!-- Julián Ospina -->
-                <div class="team-card">
-                    <div class="member-photo">
-                        <img src="/Assets/index/ospina.jpg" alt="Julián Ospina">
-                        <div class="social-links">
-                            <a href="#"><i class="fab fa-linkedin"></i></a>
-                            <a href="#"><i class="fab fa-behance"></i></a>
-                            <a href="#"><i class="fas fa-envelope"></i></a>
-                        </div>
-                    </div>
-                    <div class="member-info">
-                        <h3>Julián Ospina</h3>
-                        <p class="position">Diseñador UX/UI Inclusivo</p>
-                        <p class="bio">Especializado en diseño centrado en el usuario con enfoque en necesidades diversas y accesibilidad universal.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer class="site-footer">
-        <div class="footer-container">
-            <div class="footer-brand">
-                <div class="footer-logo">
-                    <img src="/Assets/logoazul.png" alt="Logo Distorrink">
-                    <span>Distorrink</span>
-                </div>
-                <p class="footer-mission">Conectando talento con oportunidades sin barreras.</p>
-                <div class="footer-social">
-                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                </div>
-            </div>
-    
-            <div class="footer-links">
-                <div class="links-column">
-                    <h3 class="links-title">Enlaces rápidos</h3>
-                    <ul>
-                        <li><a href="#">Inicio</a></li>
-                        <li><a href="#">Servicios</a></li>
-                        <li><a href="#">Proyectos</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Nosotros</a></li>
-                    </ul>
-                </div>
-    
-                <div class="links-column">
-                    <h3 class="links-title">Servicios</h3>
-                    <ul>
-                        <li><a href="#">Bolsa de empleo</a></li>
-                        <li><a href="#">Asesoramiento</a></li>
-                        <li><a href="#">Capacitación</a></li>
-                        <li><a href="#">Para empresas</a></li>
-                        <li><a href="#">Recursos</a></li>
-                    </ul>
-                </div>
-    
-                <div class="links-column">
-                    <h3 class="links-title">Contacto</h3>
-                    <ul class="contact-info">
-                        <li><i class="fas fa-map-marker-alt"></i> Bogotá, Colombia</li>
-                        <li><i class="fas fa-phone"></i> +57 123 456 7890</li>
-                        <li><i class="fas fa-envelope"></i> info@distorrink.com</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    
-        <div class="footer-bottom">
-            <div class="container">
-                <p>&copy; 2023 Distorrink. Todos los derechos reservados.</p>
-                <div class="legal-links">
-                    <a href="#">Política de privacidad</a>
-                    <a href="#">Términos de servicio</a>
-                    <a href="#">Accesibilidad</a>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <script src="/controller/main.js"></script>
+    </div>
 </body>
 </html>

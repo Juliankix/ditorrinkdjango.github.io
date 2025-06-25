@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Detalle de la Empresa</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="/styles/empresa/detalle.css">
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <div class="profile-header">
+        <div class="profile-avatar" id="avatarInitials"></div>
+        <div class="profile-info">
+          <h2 id="empresaNombre"></h2>
+          <span class="role-badge" id="empresaRol">Empresa</span>
+        </div>
+      </div>
+
+      <div class="detail-grid">
+        <div class="detail-group">
+          <span class="detail-label">Correo</span>
+          <div class="detail-value" id="empresaEmail"></div>
+        </div>
+
+        <div class="detail-group">
+          <span class="detail-label">Teléfono</span>
+          <div class="detail-value" id="empresaTelefono"></div>
+        </div>
+
+        <div class="detail-group">
+          <span class="detail-label">Ubicación Principal</span>
+          <div class="detail-value" id="empresaUbicacion"></div>
+        </div>
+
+        <div class="detail-group">
+          <span class="detail-label">NIT</span>
+          <div class="detail-value" id="empresaNIT"></div>
+        </div>
+
+        <div class="detail-group full-width">
+          <span class="detail-label">Otras Ubicaciones</span>
+          <div class="detail-value" id="empresaUbicaciones"></div>
+        </div>
+      </div>
+
+      <div class="document-section">
+        <h3>Documentos</h3>
+
+        <div class="document-card" id="certificadoCard">
+          <div class="document-icon">
+            <i class="fas fa-file-alt"></i>
+          </div>
+          <div class="document-info">
+            <div class="document-title">Certificado de Existencia</div>
+            <div class="document-meta" id="certificadoMeta"></div>
+          </div>
+          <div class="document-actions">
+            <a href="#" id="certificadoLink" target="_blank"><i class="fas fa-download"></i> Descargar</a>
+          </div>
+        </div>
+
+        <div class="document-card" id="rutCard">
+          <div class="document-icon">
+            <i class="fas fa-file-invoice"></i>
+          </div>
+          <div class="document-info">
+            <div class="document-title">RUT</div>
+            <div class="document-meta" id="rutMeta"></div>
+          </div>
+          <div class="document-actions">
+            <a href="#" id="rutLink" target="_blank"><i class="fas fa-download"></i> Descargar</a>
+          </div>
+        </div>
+
+        <div class="document-card" id="actaCard">
+          <div class="document-icon">
+            <i class="fas fa-scroll"></i>
+          </div>
+          <div class="document-info">
+            <div class="document-title">Acta de Constitución</div>
+            <div class="document-meta" id="actaMeta"></div>
+          </div>
+          <div class="document-actions">
+            <a href="#" id="actaLink" target="_blank"><i class="fas fa-download"></i> Descargar</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="action-buttons">
+        <a href="#" class="btn btn-outline" id="backButton">
+          <i class="fas fa-arrow-left"></i> Volver
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script src="/controller/empresa/detalle.js"></script>
+</body>
+</html>

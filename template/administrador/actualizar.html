@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Detalle del Administrador</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="/styles/administrador/detalle.css">
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <div class="profile-header">
+        <div class="profile-avatar" id="avatarInitials"></div>
+        <div class="profile-info">
+          <h2 id="adminName"></h2>
+          <span class="role-badge" id="adminRol">Administrador</span>
+        </div>
+      </div>
+
+      <div class="detail-grid">
+        <div class="detail-group">
+          <span class="detail-label">Correo</span>
+          <div class="detail-value" id="adminEmail"></div>
+        </div>
+
+        <div class="detail-group">
+          <span class="detail-label">Teléfono</span>
+          <div class="detail-value" id="adminTelefono"></div>
+        </div>
+
+        <div class="detail-group">
+          <span class="detail-label">Ubicación</span>
+          <div class="detail-value" id="adminUbicacion"></div>
+        </div>
+
+        <div class="detail-group">
+          <span class="detail-label">Rol</span>
+          <div class="detail-value" id="adminRolText"></div>
+        </div>
+      </div>
+
+      <div class="action-buttons">
+        <a href="#" class="btn btn-outline" id="backButton">
+          <i class="fas fa-arrow-left"></i> Volver
+        </a>
+        <a href="#" class="btn btn-primary" id="editButton">
+                    <i class="fas fa-edit"></i> Editar
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script src="/controller/administrador/detalle.js"></script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle del Candidato</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="/styles/candidatos/detalle.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="profile-header">
+                <div class="profile-avatar" id="avatarInitials"></div>
+                <div class="profile-info">
+                    <h2 id="candidateName"></h2>
+                    <span class="role-badge" id="candidateRole"></span>
+                </div>
+            </div>
+            
+            <div class="detail-grid">
+                <div class="detail-group">
+                    <span class="detail-label">Email</span>
+                    <div class="detail-value" id="candidateEmail"></div>
+                </div>
+                
+                <div class="detail-group">
+                    <span class="detail-label">Teléfono</span>
+                    <div class="detail-value" id="candidatePhone"></div>
+                </div>
+                
+                <div class="detail-group">
+                    <span class="detail-label">Ubicación</span>
+                    <div class="detail-value" id="candidateLocation"></div>
+                </div>
+                
+                <div class="detail-group">
+                    <span class="detail-label">Profesión</span>
+                    <div class="detail-value" id="candidateProfession"></div>
+                </div>
+                
+                <div class="detail-group">
+                    <span class="detail-label">Fecha de Nacimiento</span>
+                    <div class="detail-value" id="candidateBirthdate"></div>
+                </div>
+                
+                <div class="detail-group">
+                    <span class="detail-label">Datos Extra</span>
+                    <div class="detail-value" id="candidateExtra"></div>
+                </div>
+            </div>
+            
+            <div class="detail-group full-width">
+                <span class="detail-label">Experiencia</span>
+                <div class="detail-value" id="candidateExperience"></div>
+            </div>
+            
+            <div class="document-section">
+                <h3>Documentos</h3>
+                
+                <div class="document-card" id="cvCard">
+                    <div class="document-icon">
+                        <i class="fas fa-file-pdf"></i>
+                    </div>
+                    <div class="document-info">
+                        <div class="document-title">Hoja de Vida</div>
+                        <div class="document-meta" id="cvMeta"></div>
+                    </div>
+                    <div class="document-actions">
+                        <a href="#" id="cvLink" target="_blank"><i class="fas fa-download"></i> Descargar</a>
+                    </div>
+                </div>
+                
+                <div class="document-card" id="disabilityCard">
+                    <div class="document-icon">
+                        <i class="fas fa-file-medical"></i>
+                    </div>
+                    <div class="document-info">
+                        <div class="document-title">Certificado de Discapacidad</div>
+                        <div class="document-meta" id="disabilityMeta"></div>
+                    </div>
+                    <div class="document-actions">
+                        <a href="#" id="disabilityLink" target="_blank"><i class="fas fa-download"></i> Descargar</a>
+                    </div>
+                </div>
+                
+                <div class="document-card" id="studiesCard">
+                    <div class="document-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="document-info">
+                        <div class="document-title">Certificados de Estudio</div>
+                        <div class="document-meta" id="studiesMeta"></div>
+                    </div>
+                    <div class="document-actions">
+                        <a href="#" id="studiesLink" target="_blank"><i class="fas fa-download"></i> Descargar</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="action-buttons">
+                <a href="#" class="btn btn-outline" id="backButton">
+                    <i class="fas fa-arrow-left"></i> Volver
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="/controller/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,238 @@
+/* Reset básico */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos generales */
+body {
+    font-family: 'Nunito', sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
+    padding: 2rem;
+    color: #333;
+    line-height: 1.6;
+}
+
+.form-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #6a11cb;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+}
+
+/* Grid de formulario - 2 columnas */
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.form-group {
+    flex: 1;
+    min-width: 200px;
+}
+
+/* Campos full-width */
+.form-group-full {
+    flex: 0 0 100%;
+}
+
+/* Estilos para etiquetas y controles */
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #4a4e69;
+    font-size: 0.9rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="file"],
+select,
+textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+select {
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%234a4e69'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 0.8rem center;
+    background-size: 1rem;
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* Focus styles */
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #8e54e9;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(138, 84, 233, 0.2);
+}
+
+/* Estilo para el datepicker */
+input[type="date"] {
+    position: relative;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: auto;
+    height: auto;
+    color: transparent;
+    background: transparent;
+}
+
+/* Botón de submit */
+.btn-submit {
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    color: white;
+    border: none;
+    padding: 0.8rem 2rem;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    display: block;
+    margin: 2rem auto 0;
+    transition: all 0.3s ease;
+    width: auto;
+}
+
+.btn-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .form-row {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .form-group {
+        min-width: 100%;
+    }
+}
+
+/* Estilos para el select de roles */
+select#id_rol {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%236a11cb'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 0.8rem center;
+    background-size: 1rem;
+    padding-right: 2rem !important;
+}
+
+/* Resaltar opción seleccionada */
+select#id_rol option:checked {
+    background-color: #f0e6ff;
+    font-weight: 600;
+}
+
+/* Estilo para las opciones del dropdown */
+select#id_rol option {
+    padding: 0.5rem;
+    border-bottom: 1px solid #eee;
+}
+
+/* Efecto hover en opciones */
+select#id_rol option:hover {
+    background-color: #8e54e9 !important;
+    color: white;
+}
+
+/* Estilos para la subida de archivos */
+.file-upload {
+    position: relative;
+    margin-top: 0.5rem;
+}
+
+.file-input {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.file-label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    border: 2px dashed #8e54e9;
+    border-radius: 12px;
+    background-color: rgba(142, 84, 233, 0.05);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.file-label:hover {
+    background-color: rgba(142, 84, 233, 0.1);
+    transform: translateY(-2px);
+}
+
+.file-icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: #6a11cb;
+}
+
+.file-text {
+    font-weight: 600;
+    color: #4a4e69;
+    margin-bottom: 0.3rem;
+}
+
+.file-hint {
+    font-size: 0.8rem;
+    color: #777;
+}
+
+/* Efecto al seleccionar archivo */
+.file-input:focus + .file-label {
+    box-shadow: 0 0 0 3px rgba(138, 84, 233, 0.3);
+}
+
+/* Animación de "carga" */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.file-upload.uploading .file-label {
+    animation: pulse 1.5s infinite;
+    background-color: rgba(106, 17, 203, 0.1);
+}
